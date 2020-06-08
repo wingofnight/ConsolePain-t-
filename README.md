@@ -1,4 +1,7 @@
 # ConsolePain-t-
+
+![ConsolePain-t-](https://github.com/wingofnight/ConsolePain-t-/blob/master/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20(370).png)
+
 this is program surender you create a pictures
 
 Пока здесь будет этот уродский ридми, и не менее уродский код. 
@@ -11,3 +14,5 @@ this is program surender you create a pictures
 отполирую, и сделаю ее библиотечным файлом с возможностью надстройки. 
 
 покачто это альфа 0.
+
+![ConsolePain-t-](https://github.com/wingofnight/ConsolePain-t-/blob/master/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20(371).png)
