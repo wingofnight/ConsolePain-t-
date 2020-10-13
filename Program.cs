@@ -3,21 +3,56 @@ using PaintAndPain2077;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using SectorPaint;
 
 namespace zetetest
 {
+    public class ColorProfile
+    {
+        public ConsoleColor BackGround { get; set; }
+        public ConsoleColor ForeGround { get; set; }
+       
+    }
+   
     public class SectorPaint : Paint
     {
+      
+       public SectorPaint(string symbol) { ClassesCreate(); this.symbol = symbol; }
+
         int lastLenght = 0;
-        public bool ex = true;
-        public void Point(int x, int y, int z)
+        public string symbol = "";
+        
+        public void ClassesCreate() {
+            //нужно сделать все цвета которые есть в ConsoleColor.блаблабла. 
+
+            ColorProfile Red = new ColorProfile();
+            Red.ForeGround = ConsoleColor.Red;
+            Red.BackGround = ConsoleColor.Black;
+
+            ColorProfile DarckRed = new ColorProfile();
+            DarckRed.ForeGround = ConsoleColor.DarkRed;
+        }
+     
+    public void Point(int x, int y)
         {
             Console.SetCursorPosition(x, y);
-            Black(z);
+            Black();
         }
 
-        public void PrintLine(double StartLenght, double StartHeight, double FinishLenght, double FinishHeight, int LineLenght)
+        public void PrintLine(double StartLenght, double StartHeight, double FinishLenght, double FinishHeight, int LineLenght, ColorProfile color)
         {
+            try
+            {   Console.ForegroundColor = color.BackGround;
+                Console.BackgroundColor = color.ForeGround;
+            }
+            catch (Exception)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("\n\nНеправильно указан цвет!");
+                throw;
+            }
+          
+
             lastLenght = Convert.ToInt32(StartLenght);
             double coefficient;
 
@@ -43,7 +78,7 @@ namespace zetetest
             void Stamp(double Lenght, double Height)
             {
                 Console.SetCursorPosition(Convert.ToInt32(Lenght), Convert.ToInt32(Height));
-                DarckRed(thickness());
+                for (int i = 0; i < thickness(); i++) Console.Write(symbol);               
             }
             //линия сбоку вбок (при одинаковой высоте)
             if (StartHeight == FinishHeight && StartLenght < FinishLenght)
@@ -102,42 +137,56 @@ namespace zetetest
         }
 
     }
-    
-    
-
-    class Program
+        public class Chest   {
+      
+           //короче класс сундку содержит кроме рисунка много других функций.
+        public void print()
         {
-
-            static void Main(string[] args)
+            // кроме это объект обладает не только рисунком
+            while (true)
             {
 
+                Console.Clear();
                 var line = new SectorPaint();
+            line.PrintLine(0, 0, 0, 30, 70);
+            Thread.Sleep(1000);
+            Console.Clear();
+            line.PrintLine(30, 0, 30, 30, 70);
+            }
+        }
 
-            line.PrintLine(0, 0, 80, 50, 5);
-            line.PrintLine(80, 50, 120, 50, 5);
-            line.PrintLine(80, 51, 92, 51, 5);
-            line.PrintLine(110, 51, 120, 51, 5);
-            line.PrintLine(80, 52, 85, 52, 5);
-            line.PrintLine(115, 52, 120, 52, 5);
-            line.PrintLine(120, 50, 200, 0, 5);
-            line.PrintLine(80, 50, 80, 70, 5);
-            line.PrintLine(200, 0, 200, 70, 5);
-            line.PrintLine(78, 50, 78, 150, 5);
-            line.PrintLine(205, 0, 205, 150, 5);
-            line.PrintLine(120, 50, 120, 70, 5);
-            line.PrintLine(122, 50, 122, 150, 5);
-            line.PrintLine(115, 49, 120, 49, 5);
-            line.PrintLine(80, 49, 85, 49, 5);
-            line.PrintLine(118, 48, 125, 48, 1);
-            line.PrintLine(80, 48, 82, 48, 5);
-            line.PrintLine(122, 47, 125, 47, 1);
-            line.PrintLine(80, 47, 82, 47, 1);
-            line.PrintLine(40, 25, 160, 25, 1);
-            line.PrintLine(52, 30, 155, 30, 1);
-            line.PrintLine(114, 35, 148, 35, 1);
-            line.PrintLine(128, 40, 140, 40, 1);
-            /* line.PrintLine(0, 0, 21, 0, 1);
 
+    }
+
+
+   
+
+    
+    class Program
+        {
+        public static void Methode(ColorProfile colors)
+        {
+            Console.ForegroundColor = colors.BackGround;
+
+        }
+        static void Main(string[] args)
+            {
+           
+            Chest chest_1 = new Chest();
+
+            // chest_1.print();
+
+      
+
+            var line = new SectorPaint("#");
+            Console.WriteLine("gusefun");
+
+           
+            line.PrintLine(0, 0, 0, 5, 1,Red);//это может работать когда подключиться как DLL если нет, тогда надо функцию делать в мейн.
+
+
+
+            /*
              line.Point(4, 0, 2);
              line.Point(9, 0, 2);
              line.Point(14, 0, 2);
