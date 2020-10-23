@@ -1,14 +1,25 @@
 ﻿using System;
-
+///<summary>
+///эта программа позволяет рисовать любые линии разных цветов и толщины. 
+///</summary>
  
 namespace Paint
-{
+{///<summary>
+///этот класс создаёт профили цветов, устанавливая задний фон и цвет символа. 
+///</summary>
+///<remarks>
+///если поставить полупрозрачный символ, и выбрать фон и цвет символа разных цветов, то можно получить новый цвет путем смешивания. 
+///</remarks>
     public class ColorProfile
-    {
+    { ///<value> BackGround устанавливает цвет заднего фона, и принимает значение ConsoleColor.Color</value>
         public ConsoleColor BackGround { get; set; }
+      ///<value> ForeGround устанавливает цвет символа и принимает значение ConsoleColor.Color</value>
         public ConsoleColor ForeGround { get; set; }
-
-        public ColorProfile(ConsoleColor ForeGRound, ConsoleColor BackGround)
+     
+      ///<remarks>
+      ///конструктор класса принимает значения ConsoleColor.Color и устанавливает ForeGround и BackGround</param>
+      ///</remarks> 
+      public ColorProfile(ConsoleColor ForeGRound, ConsoleColor BackGround)
         {
             this.ForeGround = ForeGRound;
             this.BackGround = BackGround;
