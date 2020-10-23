@@ -1,0 +1,13 @@
+C:\Devop\ConsolePainter\ConsolePain-t-\src\bin\Debug\netcoreapp3.1\src.exe
+C:\Devop\ConsolePainter\ConsolePain-t-\src\bin\Debug\netcoreapp3.1\src.deps.json
+C:\Devop\ConsolePainter\ConsolePain-t-\src\bin\Debug\netcoreapp3.1\src.runtimeconfig.json
+C:\Devop\ConsolePainter\ConsolePain-t-\src\bin\Debug\netcoreapp3.1\src.runtimeconfig.dev.json
+C:\Devop\ConsolePainter\ConsolePain-t-\src\bin\Debug\netcoreapp3.1\src.dll
+C:\Devop\ConsolePainter\ConsolePain-t-\src\bin\Debug\netcoreapp3.1\src.pdb
+C:\Devop\ConsolePainter\ConsolePain-t-\src\obj\Debug\netcoreapp3.1\src.csprojAssemblyReference.cache
+C:\Devop\ConsolePainter\ConsolePain-t-\src\obj\Debug\netcoreapp3.1\src.AssemblyInfoInputs.cache
+C:\Devop\ConsolePainter\ConsolePain-t-\src\obj\Debug\netcoreapp3.1\src.AssemblyInfo.cs
+C:\Devop\ConsolePainter\ConsolePain-t-\src\obj\Debug\netcoreapp3.1\src.csproj.CoreCompileInputs.cache
+C:\Devop\ConsolePainter\ConsolePain-t-\src\obj\Debug\netcoreapp3.1\src.dll
+C:\Devop\ConsolePainter\ConsolePain-t-\src\obj\Debug\netcoreapp3.1\src.pdb
+C:\Devop\ConsolePainter\ConsolePain-t-\src\obj\Debug\netcoreapp3.1\src.genruntimeconfig.cache
